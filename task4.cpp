@@ -13,7 +13,16 @@ int main() {
     min = sec / 60;     
     sec %= 60;            
 
-    cout<<"HH:MM:SS"<<endl;
-    cout<<"0"<<hours<<" : "<<"0"<<min<<" : "<<"0"<<sec;
+    if (hours < 10)
+        cout<<"0"<<hours<<" : ";
+    if (min < 10)
+        cout<<"0"<<min<<" : ";
+    if (sec < 10)
+        cout<<"0"<<sec<<endl;
+    else 
+        cout<<min<<" : "<<sec<<endl;
+
+    cout<<"HH : MM : SS"<<endl;
+   
     return 0;
 }
